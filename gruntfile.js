@@ -4,6 +4,8 @@
  */
 "use strict";
 
+const BUILD       = "build";
+const DIST        = "dist";
 const PACKAGEJSON = "package.json";
 
 module.exports = function( grunt ) {
@@ -11,6 +13,20 @@ module.exports = function( grunt ) {
   grunt.option( "pkgjson",  grunt.file.readJSON( PACKAGEJSON ));
 
   grunt.initConfig({
+
+    angularjson: {
+      template:     "test/config/angular/angular.json", // file relative to gruntfile.js
+      build:        BUILD,  // build directory - relative to gruntfile.js
+      fragments:    [ // pattern used to look for fragment in library directories
+                      "config/angular/angular.lib.json", // relative to library directory
+                      "**/angular.lib.json"
+                    ],
+      libs:         [ // directory pattern(s) for libraries
+                      "test/lib-*",
+                      "test/otherlib",
+                      "!test/lib-dont-include-this-one"
+                    ]
+    },
 
     jshint: {
       all: [
@@ -39,5 +55,5 @@ module.exports = function( grunt ) {
   grunt.registerTask( "test",    [ ]);
 
   // run lint and all tests by default
-  grunt.registerTask( "default", [ "jshint", "test" ]);
+  grunt.registerTask( "default", [ "jshint", "angularjson", "test" ]);
 };
