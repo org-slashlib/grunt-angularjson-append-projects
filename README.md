@@ -4,7 +4,7 @@ use grunt to append projects to an angular.json file
 ## story ##
 angular 6 introduced creating angular libraries by using the angular cli.
 * create a project: <code>ng new angular-library-container</code>
-* create a subproject (library): <code>ng generate library example-angular-lib --prefix=pfx
+* create a subproject (library): <code>ng generate library example-angular-lib --prefix=pfx</code>
 
 If you are not yet familiar to this, I recommend reading:  
 https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5  
