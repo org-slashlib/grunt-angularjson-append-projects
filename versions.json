@@ -1,0 +1,21 @@
+{
+    "current" : "0.1.0",
+    "0.1.0" : {
+                "comment"   :   "preparations for initial realease",
+                "format"    :   { "version" : "1.0" },
+                "added"     :   [
+                                 [ "tasks",                  "directory", "package source files", "build process"       ],
+                                 [ "test",                   "directory", "testing",              "build process"       ],
+                                 [ "grunt",                  "package",   "dependency (dev)",     "build process"       ],
+                                 [ "grunt-contrib-copy",     "package",   "dependency (dev)",     "build process"       ],
+                                 [ "grunt-contrib-jshint",   "package",   "dependency (dev)",     "build process"       ],
+                                 [ "grunt-contrib-nodeunit", "package",   "dependency (dev)",     "build process"       ],
+                                 [ "grunt-shell",            "package",   "dependency (dev)",     "build process"       ],
+                                 [ "gruntfile",              "file",      "build process",        "build process"       ],
+                                 [ "CHANGELOG.md",           "file",      "documentation",        "project management"  ],
+                                 [ "LICENSE",                "file",      "documentation",        "project management"  ],
+                                 [ "README.md",              "file",      "documentation",        "project management"  ],
+                                 [ "versions.json",          "file",      "automation",           "project management"  ]
+                                ]
+                }
+}

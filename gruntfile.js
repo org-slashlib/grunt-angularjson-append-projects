@@ -4,8 +4,9 @@
  */
 "use strict";
 
+const path        = require( "path" );
+
 const BUILD       = "build";
-const DIST        = "dist";
 const PACKAGEJSON = "package.json";
 
 module.exports = function( grunt ) {
@@ -28,6 +29,17 @@ module.exports = function( grunt ) {
                     ]
     },
 
+    copy: {
+      dist_latest: {
+        expand: true,
+        src:    "grunt-angularjson-append-projects-*.tgz",
+        dest:   ".",
+        rename: function( dest /*, src */ ) {
+          return path.join( dest, "grunt-angularjson-append-projects-latest.tgz" );
+        }
+      },
+    },
+
     jshint: {
       all: [
         "gruntfile.js",
@@ -42,18 +54,27 @@ module.exports = function( grunt ) {
     // unit tests.
     nodeunit: {
       tests: [ "test/*_test.js" ]
+    },
+
+    // deployment
+    shell: {
+      npm_pack: {
+        command: "npm pack"
+      }
     }
   }); // end of grunt.initConfig({ ... })
 
   // load this plugin's task(s) to run (test) them
   grunt.loadTasks( "tasks" );
 
+  grunt.loadNpmTasks( "grunt-contrib-copy"     );
   grunt.loadNpmTasks( "grunt-contrib-jshint"   );
   grunt.loadNpmTasks( "grunt-contrib-nodeunit" );
+  grunt.loadNpmTasks( "grunt-shell"            );
 
   // run tests
   grunt.registerTask( "test",    [ ]);
 
   // run lint and all tests by default
-  grunt.registerTask( "default", [ "jshint", "angularjson", "test" ]);
+  grunt.registerTask( "default", [ "jshint", "angularjson", "test", "shell:npm_pack", "copy:dist_latest" ]);
 };
