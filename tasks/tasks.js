@@ -14,7 +14,7 @@ const LIB             = "lib";
 const UTF8            = "UTF-8";
 
 const OPTIONS = {
-  // just for the beauty if it ...
+  // just for the beauty of it ...
   // assume posix, as most path directives in node use posix style
   path: path.posix,
 };
@@ -36,7 +36,7 @@ function isString( value ) {
 }
 
 /**
- *  Update contents of angular.json fragment
+ *  Update content of angular.json fragment
  *  Fragments specify directories relative to their own subproject,
  *  which is invalid, in repect to an enclosing project, which will
  *  build the subproject.
@@ -97,7 +97,7 @@ module.exports = function( grunt ) {
    *        - angular.fragments = pattern
    *        or
    *        - angular.fragments = [ pattern1, !pattern2, ... ]
-   *        but make sure, the patterns matche only one file per
+   *        but make sure, the patterns match only one file per
    *        subproject!
    *        pattern can contain directory (**) and file (*) wildcards.
    *
