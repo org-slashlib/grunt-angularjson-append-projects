@@ -7,3 +7,4 @@ See <code>versions.json</code> in case you need a machine readable feature list.
 * grunt tasks for "grunt-angularjson-append-projects"
 * directorystructure for testing (see folder "test")
 * grunt build process
+* contributing guidelines

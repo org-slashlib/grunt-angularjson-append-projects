@@ -4,6 +4,8 @@
                 "comment"   :   "preparations for initial realease",
                 "format"    :   { "version" : "1.0" },
                 "added"     :   [
+                                 [ "docs",                   "directory", "documentation",        "documentation"       ],
+                                 [ "docs/contributing.md",   "file",      "documentation",        "how to contribute"   ],
                                  [ "tasks",                  "directory", "package source files", "build process"       ],
                                  [ "test",                   "directory", "testing",              "build process"       ],
                                  [ "grunt",                  "package",   "dependency (dev)",     "build process"       ],
