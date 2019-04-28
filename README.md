@@ -14,7 +14,7 @@ https://blog.angularindepth.com/angular-workspace-no-application-for-you-4b451af
 
 ## getting started ##
 
-This guide assumes, that you are familiar with the use of grunt.  
+This guide assumes, that you are familiar with the use of npm and grunt.  
 After having installed grunt@>=1.0.4, you may install this plugin by the following command:
 
 <code>npm install grunt-angularjson-append-projects --save-dev</code>
