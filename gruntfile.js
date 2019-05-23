@@ -43,17 +43,11 @@ module.exports = function( grunt ) {
     jshint: {
       all: [
         "gruntfile.js",
-        "tasks/*.js",
-        "<%= nodeunit.tests %>"
+        "tasks/*.js"
       ],
       options: {
         jshintrc: ".jshintrc"
       }
-    },
-
-    // unit tests.
-    nodeunit: {
-      tests: [ "test/*_test.js" ]
     },
 
     // deployment
@@ -71,9 +65,6 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( "grunt-contrib-jshint"   );
   grunt.loadNpmTasks( "grunt-contrib-nodeunit" );
   grunt.loadNpmTasks( "grunt-shell"            );
-
-  // run tests
-  grunt.registerTask( "test",    [ ]);
 
   // run lint and all tests by default
   grunt.registerTask( "default", [ "jshint", "angularjson", "test", "shell:npm_pack", "copy:dist_latest" ]);
