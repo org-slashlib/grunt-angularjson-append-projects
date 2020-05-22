@@ -1,6 +1,6 @@
 {
   "name": "grunt-angularjson-append-projects",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "use grunt to append projects to an angular.json file",
   "author": "Dirk Brenckmann <db.developer@gmx.de>",
   "license": "MIT",
@@ -28,13 +28,14 @@
   },
   "homepage": "https://github.com/org-slashlib/grunt-angularjson-append-projects#readme",
   "peerDependencies": {
-    "grunt": ">=1.0.0"
+    "grunt": ">=1.1.0",
+    "lodash": ">=4.17.15"
   },
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^2.1.0",
-    "grunt-contrib-nodeunit": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
     "grunt-shell": "^3.0.1"
   }
 }

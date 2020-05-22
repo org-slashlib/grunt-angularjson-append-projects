@@ -67,5 +67,5 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks( "grunt-shell"            );
 
   // run lint and all tests by default
-  grunt.registerTask( "default", [ "jshint", "angularjson", "test", "shell:npm_pack", "copy:dist_latest" ]);
+  grunt.registerTask( "default", [ "jshint", "angularjson", "shell:npm_pack", "copy:dist_latest" ]);
 };
